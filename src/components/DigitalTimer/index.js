@@ -1,4 +1,5 @@
 // Write your code here
+// Write your code here
 import {Component} from 'react'
 import './index.css'
 
@@ -13,6 +14,8 @@ class DigitalTimer extends Component {
   timer = () => {
     const {time} = this.state
     this.timeId = setInterval(this.time, 1000)
+    this.setState({isStarted: trueccbp start RJSCPC7UBX
+    })
     if (time.getMinutes() === 0 && time.getSeconds() === 0) {
       clearInterval(this.timeId)
       this.setState(prev => ({
@@ -33,7 +36,7 @@ class DigitalTimer extends Component {
     const {time} = this.state
     const newTime = time.getSeconds() - 1
     time.setSeconds(newTime)
-    this.setState({time, islimit: false, isStarted: true})
+    this.setState({time, islimit: false})
   }
 
   increase = () => {
